@@ -37,13 +37,14 @@ Restrições de integridade:
   UNIQUE - No Cliente.email e Carteira.Cliente_idCliente ||
   CHECK - saldo não pode ser menor que 0, preco nao pode ser menor que 0, classificação indicativa, status de pagamento, valorTotal e precoUnitario
 
--------------------------------------------------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------------------------------
 Comandos DML:
 
 INSERT - Popular o banco de dados para testar relacionamentos, regras e a integridade do banco de dados. ||
 INSERT com LAST_INSERT_ID() - cria uma carteira ja vinculada ao cliente que foi recem inserido no banco de dados, retirando a necessidade de inserir seus dados manualmente ||
 UPDATE - Altera os dados que ja existem sem apagar ou recriar os registros anteriores, por exemplo uma promoção apenas altera o Jogo.preco os pedidos antigos nao mudariam, já que Item_Pedido.precoUnitario guarda sempre o preço de quando a compra foi feita ||
 DELETE - Apaga dados que não são mais necessários (possui ON DELETE CASCADE e AND statusPedido = 'CANCELADO' para evitar apagar por engano um pedido que esá como válido).
+
 -----------------------------------------------------------------------------------------------------------------
 Role e usuários:
 
